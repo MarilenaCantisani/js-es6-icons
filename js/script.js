@@ -6,6 +6,7 @@ Coloriamo le icone per tipo
 Milestone 3
 Creiamo una select con i tipi di icone e usiamola per filtrare le icone*/
 
+
 //* Variable linking to an html element
 const displayCard = document.querySelector("#icons-section > .row");
 
@@ -31,4 +32,22 @@ const renderIconsCard = (arr, displayElement) => {
 };
 
 renderIconsCard(icons, displayCard);
+
+/* --------------------------------- FILTERS -------------------------------- */
+//* Link a variable to the select html element
+const selectElement = document.getElementById("filter-section");
+
+//* Filter icons by type
+selectElement.addEventListener("change", () => {
+    const filterType = selectElement.value;
+
+    // Filter all elements:
+    if (filterType === "all") {
+        renderIconsCard(icons, displayCard);
+        return;
+    };
+
+    const filteredIcons = icons.filter((icon) => filterType === icon.type);
+    renderIconsCard(filteredIcons, displayCard);
+});
 
