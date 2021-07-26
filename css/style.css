@@ -13,8 +13,7 @@
     width: 100%;
 }
 
-.bg-style {
-    height: calc(100vh - 146px);
+.bg-lightgray {
     background-color: lightgray;
 }
 
