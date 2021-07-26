@@ -11,13 +11,17 @@ const displayCard = document.querySelector("#icons-section > .row");
 
 let iconsTemplate = "";
 
-icons.forEach((icon) => {
+icons.forEach((icon, i) => {
+    const hasOffset = i % 5 === 0 ? `offset-md-1` : "";
+
     iconsTemplate += `
-    <div class="card col col-md-2 shadow-sm m-3">
-        <div class="card-body text-center">
-            <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.prefix}2x"></i>
-            <h2 class="h6 text-uppercase">${icon.name.toUpperCase()}</h2>
-        </div>
+    <div class=" col col-sm-4 col-md-2 ${hasOffset}">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.prefix}2x ${icon.type}"></i>
+                <h2 class="h6 text-uppercase">${icon.name.toUpperCase()}</h2>
+            </div>
+        </div>   
     </div>`;
 
 });
@@ -25,3 +29,7 @@ icons.forEach((icon) => {
 console.log(iconsTemplate);
 
 displayCard.innerHTML = iconsTemplate;
+
+const renderIconsCard = (arr, displayElement) => {
+
+}

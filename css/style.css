@@ -21,3 +21,20 @@
     border-radius: 10px;
 }
 
+.animal {
+    color: blue;
+
+}
+
+.vegetable {
+    color: goldenrod;
+}
+
+
+.user {
+    color: purple;
+}
+
+.company {
+    color: olivedrab;
+}
