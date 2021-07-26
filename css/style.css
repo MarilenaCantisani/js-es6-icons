@@ -1,0 +1,14 @@
+#my-title-header {
+    color:deepskyblue;
+    font-family: 'Boogaloo';
+    font-size: 40px;
+}
+
+.bg-deepskyblue {
+    background-color:deepskyblue;
+}
+
+#filter-bar {
+    height: 60px;
+    width: 100%;
+}
