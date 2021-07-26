@@ -12,3 +12,13 @@
     height: 60px;
     width: 100%;
 }
+
+.bg-style {
+    height: calc(100vh - 146px);
+    background-color: lightgray;
+}
+
+#icons-section .card {
+    border-radius: 10px;
+}
+
